@@ -48,12 +48,15 @@
                                         <rect key="frame" x="5.6666666666666714" y="634" width="150" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="13U-NL-djb"/>
-                                            <constraint firstAttribute="width" constant="150" id="tOf-TK-9hy"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="tOf-TK-9hy"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="NEXT">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="changeLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRJ-vX-uhp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -69,6 +72,12 @@
                             <constraint firstItem="gJz-8g-XAh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kGn-1S-ZBJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="vl0-hF-vP7" id="SgW-Rh-cHA"/>
+                        <outlet property="nextButton" destination="eAO-Sp-rtd" id="Lti-Us-VVU"/>
+                        <outlet property="redLightView" destination="gUe-a5-upj" id="0eS-TD-hmO"/>
+                        <outlet property="yellowLightView" destination="14K-6u-vz6" id="7J0-mn-ZI0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
