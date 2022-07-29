@@ -9,22 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var redLightView: UIView!
-    @IBOutlet weak var yellowLightView: UIView!
-    @IBOutlet weak var greenLightView: UIView!
-    
-    @IBOutlet weak var lightChangeButton: UIButton!
+//    @IBOutlet weak var redLightView: UIView!
+//    @IBOutlet weak var yellowLightView: UIView!
+//    @IBOutlet weak var greenLightView: UIView!
+//    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        setupLightViews()
     }
     
     @IBAction func changeLight() {
     }
     
-    private func setupLightViews() {
-        
-    }
-
+//    private func setupLightViews() {
+//        redLightView.layer.cornerRadius = redLightView.layer.bounds.width / 2
+//        redLightView.clipsToBounds = true
+//    }
 }
 
