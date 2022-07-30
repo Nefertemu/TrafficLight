@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         nextButton.layer.cornerRadius = 20
         
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeLight() {
-
+        
         if redLightView.alpha == 0.5 && yellowLightView.alpha == 0.5 {
             redLightView.alpha = 1
             greenLightView.alpha = 0.5
