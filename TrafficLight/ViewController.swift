@@ -14,20 +14,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLightView: UIView!
     @IBOutlet weak var nextButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLightViews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
         nextButton.layer.cornerRadius = 20
+        
+        redLightView.layer.cornerRadius = redLightView.layer.bounds.width / 2
+        redLightView.alpha = 0.5
+        
+        yellowLightView.layer.cornerRadius = yellowLightView.layer.bounds.width / 2
+        yellowLightView.alpha = 0.5
+        
+        greenLightView.layer.cornerRadius = greenLightView.layer.bounds.width / 2
+        greenLightView.alpha = 0.5
     }
     
     @IBAction func changeLight() {
-        nextButton.setTitle("NEXT", for: .normal)
 
         if redLightView.alpha == 0.5 && yellowLightView.alpha == 0.5 {
             redLightView.alpha = 1
             greenLightView.alpha = 0.5
+            nextButton.setTitle("NEXT", for: .normal)
         } else if yellowLightView.alpha == 0.5 {
             yellowLightView.alpha = 1
             redLightView.alpha = 0.5
@@ -35,21 +48,6 @@ class ViewController: UIViewController {
             greenLightView.alpha = 1
             yellowLightView.alpha = 0.5
         }
-    }
-    
-    private func setupLightViews() {
-        redLightView.layer.cornerRadius = redLightView.layer.bounds.width / 2
-        redLightView.clipsToBounds = true
-        redLightView.alpha = 0.5
-        
-        yellowLightView.layer.cornerRadius = yellowLightView.layer.bounds.width / 2
-        yellowLightView.clipsToBounds = true
-        yellowLightView.alpha = 0.5
-        
-        greenLightView.layer.cornerRadius = greenLightView.layer.bounds.width / 2
-        greenLightView.clipsToBounds = true
-        greenLightView.alpha = 0.5
-        
     }
 }
 
