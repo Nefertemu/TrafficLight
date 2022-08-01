@@ -50,5 +50,6 @@ class ViewController: UIViewController {
             redLightView.alpha = 1
         }
     }
+    
 }
 
